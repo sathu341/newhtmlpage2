@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="" enctype="multipart/form-data">
+            <div>
+                <label>First Name</label>
+                <br/>
+            <input 
+              type="text" 
+              name="firstname"
+              placeholder="enter your first name"/>
+            </div>
+            <div>
+                <label>Last Name</label>
+                <br/>
+            <input 
+              type="text" 
+              name="lastname"
+              placeholder="enter your last name"/>
+            </div>
+            <div>
+                <label>Email</label>
+                <br/>
+                <input 
+                  type="email"
+                  name="eml"
+                  placeholder="enter your email id"/>
+            </div>
+            <div>
+                <label>Password</label>
+                <br/>
+                <input 
+                  type="password"
+                  name="password"
+                  placeholder="enter your password"
+                  />
+            </div>
+            <div>
+                <label>Phone</label>
+                <br/>
+                <input
+                  type="tel"
+                  name="mobile"
+                  placeholder="your mobile number"/>
+            </div>
+            <div>
+              <label for="maleid">Male</label>
+              <input 
+                type="radio"
+                name="gender"
+                value="male"
+                id="maleid"
+                />
+                <label for="femaleid">Female</label>
+                <input 
+                   type="radio"
+                   name="gender"
+                   value="female"
+                   id="femaleid"
+                   />
+            </div>
+            <div>
+                <label>Upload Your Photo</label>
+                <input 
+                   type="file"
+                   name="image"
+                   />
+            </div>
+            <div>
+                <label>Age</label>
+                <br/>
+                <input 
+                    type="number"
+                    min="20"
+                    max="80"
+                    />
+            </div>
+            <div>
+                <label>Address</label>
+                <br/>
+                <textarea cols="30" rows="4"></textarea>
+            </div>
+            <div>
+               <label> Subcription</label>
+               <select name="subc">
+                <option>Select</option>
+                <option>Gold</option>
+                <option>Sliver</option>
+                <option>Bronzes</option>
+               </select>
+            </div>
+            <div>
+                <input 
+                  type="checkbox"
+                  name="agree"
+                  value="agree"
+                  />
+                  <label>
+                    I agree Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+                  </label>
+            </div>
+          <button type="submit">submit</button>
+        </form>
+    </div>
+</body>
+</html>
