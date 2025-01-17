@@ -1,3 +1,6 @@
+*{
+    margin:0px;
+}
 h1{
     text-align:center;
     color:darkgreen;
@@ -6,4 +9,32 @@ h1{
 p{
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    /* background-color:MediumTurquoise; */
+    /* background-image:url(../image/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover; */
+    background:linear-gradient(92deg,transparent,MediumTurquoise,transparent);
+    /* background:-webkit-linear-gradient(92deg,green,yellow);
+    background:-o-linear-gradient(92deg,green,yellow); */
+
+}
+.aboutp{
+    /* padding-left:20px;
+    padding-top:20px;
+    padding-right:20px;
+    padding-bottom:20px; */
+    padding:10px;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    height:400px;
+    font-size: 25px;
+    display:flex;
+    text-align: justify;
+    align-items:center;
+    background-image: url(../image/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+
 }
