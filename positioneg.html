@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .item{
+        width:200px;
+        height:170px;
+      }
+      .one{
+        background-color: aqua;
+         position:static;
+         top:12px;
+      }
+      .two{
+        position:relative;
+        bottom:0;
+        left:200px;
+        background-color: green;
+      }
+      .three{
+        position:relative;
+        left:200px;
+        background-color: blue;
+      }
+      .container{
+        width:60%;
+        margin:0 auto;
+        border:1px solid red;
+      }
+    </style>
+</head>
+<body>
+    
+    <div class="item one"></div>
+    <div class="container">
+        <div class="item two"></div>
+    </div>
+   
+    <div class="container">
+       <div class="item three"></div>
+
+    </div>
+</body>
+</html>

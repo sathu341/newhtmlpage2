@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display:grid;
+            grid-template-columns:repeat(2,1fr); /* colums creation */
+            grid-template-rows:100px 200px; /* row create */
+            gap:10px 22px;
+        }
+        .items{
+            background-color: bisque;
+        }
+        .four{
+            display:grid;
+            grid-template-columns:1fr 2fr 1fr;/*1:2:1*/
+            grid-template-rows:100px;
+            gap:10px 5px;
+            
+            
+        }
+        .four > div{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="items">1</div>
+        <div class="items two">2</div>
+        <div class="items">3</div>
+        <div class="items four">
+            <div>
+                1
+            </div>
+            <div>2</div>
+            <div>3</div>
+            <div>
+                4
+            </div>
+            <div>5</div>
+            <div>6</div>
+
+        </div>
+    </div>
+</body>
+</html>
