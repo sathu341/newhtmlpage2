@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div>
+        <label for="">Enter your Name</label>
+        <input type="text" name="username" id="userid">
+        <br>
+       
+        <button onclick="displayContent()">
+            submit
+        </button>
+    </div>
+    <!--Message-->
+  
+        <h3></h3>
+
+    <script>
+        function displayContent()
+        {   
+             let userName=document
+             .querySelector("#userid")
+             .value;
+             if(userName=="")
+             {
+               
+                document.querySelector("h3").innerHTML="Your Name is Requied!"
+             }
+             else{
+                document.querySelector("h3").innerHTML="Welcome, "+userName;
+             }
+         
+          
+           
+             
+             
+         
+        }
+        
+    </script>
+</body>
+</html>
