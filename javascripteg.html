@@ -15,7 +15,7 @@
             border:2px solid lightgrey;
             border-radius:10px;
             padding:50px;
-            box-shadow:0px 1px 8px rgb(33, 32, 32);
+            box-shadow:0px 1px 8px rgb(19, 231, 86);
         }
         legend{
             background-color: black;
@@ -74,11 +74,53 @@
             color:rgb(11, 237, 98);
             font-size:20px;
         }
+        .error-placeholder::placeholder {
+                color: red !important;
+         }
     </style>
     <script>
    window.addEventListener("DOMContentLoaded",()=>{
-    let form=document.querySelector("form");
+     // Get today's date in YYYY-MM-DD format
+     let today = new Date();
+    let dd = String(today.getDate()+1).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    let yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd; // Format as YYYY-MM-DD
+    console.log(today)
     
+    document.querySelector('#dateid').setAttribute('min', today);
+   document.querySelector('#dateid').value="";
+    let isValid=true;
+    let form=document.querySelector("form");
+    //firstname validation 
+    let fname=document.querySelector("input[name='fname']");
+    fname.addEventListener("blur",()=>{
+        isValid&=validationCheck(fname,"fnameError","invalid") //&&
+        //isValid=isValid && validationCheck(fname,"fnameError","invalid") 
+    })
+
+     //validation check
+     function validationCheck(inputname,errorid,message){
+           
+           if(inputname.value==""){
+             document.querySelector(`#${errorid}`)
+             .innerHTML=message;
+             fname.style.borderBottom="1px solid red";
+             fname.classList.add("error-placeholder")
+             fname.setAttribute("placeholder","invalid")
+             return false
+           }
+           else{
+             document.querySelector(`#${errorid}`)
+             .innerHTML="Good";
+             document.querySelector(`#${errorid}`).style.color="green";
+             fname.style.borderBottom="1px solid green";
+             return true;
+           }
+ 
+         }
+    //submit event handling
     form.addEventListener("submit",(event)=>{
   
 
@@ -88,12 +130,16 @@
                 event.preventDefault();
                 document.querySelector("#genderError")
                 .innerHTML="Select your Gender";
+                
                 return false;
                 }
-                else{
+                else if(isValid){
                     alert("Submit")
                 }
+             
         })
+
+       
 
    })
 
@@ -107,12 +153,16 @@
         <legend>Register Here!</legend>
     <form action="" method="post" name="form1">
         <h2 id="message"></h2>
+        <div class="form_group">
+            <input type="date" name="datefield" id="dateid">
+        </div>
          <div class="form_group">
             <label class="form_label" for="">
                 <i class="fa-solid fa-user username"></i>&nbsp;
                 First Name <sup style="color:red;">*</sup></label>
             <input class="form_control" type="text" name="fname" id=""/>
-            <span class="error" id="fnameError"></span>
+            <br/>
+            <span class="error" style="color:red;" id="fnameError"></span>
          </div>
          <div class="form_group">
             <label class="form_label" for="">  <i class="fa-solid fa-user username"></i>&nbsp;
